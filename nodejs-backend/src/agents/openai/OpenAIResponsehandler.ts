@@ -17,5 +17,8 @@ export class OpenAIResponseHandler{
         private readonly channel: Channel,
         private readonly message: MessageResponse,
         private readonly onDisposeL: () => void
-    ){}
+    ){
+        this.chatClient.on("ai_indicator.stop",this.handleStopGenerating)
+    }
+    private handleStopGenerating = async (event: Event) => { }
 }
