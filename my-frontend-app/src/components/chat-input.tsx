@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
+import { Textarea } from "./ui/textarea";
+import { cn } from "./lib/utils";
 import { ArrowRight, Square, X } from "lucide-react";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { WritingPromptsToolbar } from "./writing-prompts-toolbar";

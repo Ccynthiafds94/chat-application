@@ -1,6 +1,6 @@
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { Avatar, AvatarFallback } from "./ui/avatar";
+import { Button } from "./ui/button";
+import { cn } from "./lib/utils";
 import { Bot, Check, Copy } from "lucide-react";
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";

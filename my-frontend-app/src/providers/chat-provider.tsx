@@ -1,5 +1,5 @@
-import { ReactNode, useCallback } from "react";
-import { User } from "stream-chat";
+import { type ReactNode, useCallback } from "react";
+import { type User } from "stream-chat";
 import { Chat, useCreateChatClient } from "stream-chat-react";
 import { LoadingScreen } from "../components/loading-screen";
 import { useTheme } from "../hooks/use-theme";

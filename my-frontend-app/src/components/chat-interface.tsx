@@ -1,4 +1,4 @@
-import { useAIAgentStatus } from "@/hooks/use-ai-agent-status";
+import { useAIAgentStatus } from "../hooks/use-ai-agent-status";
 import {
   Bot,
   Briefcase,
@@ -19,7 +19,7 @@ import {
   Window,
 } from "stream-chat-react";
 import { AIAgentControl } from "./ai-agent-control";
-import { ChatInput, ChatInputProps } from "./chat-input";
+import { ChatInput,type ChatInputProps } from "./chat-input";
 import ChatMessage from "./chat-message";
 import { Button } from "./ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
@@ -288,7 +288,7 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({
             </div>
             <div>
               <h2 className="text-sm font-semibold text-foreground">
-                {channel?.data?.name || "New Writing Session"}
+                {(channel?.data as any)?.name || "New Writing Session"}
               </h2>
               <p className="text-xs text-muted-foreground">
                 AI Writing Assistant • Always improving

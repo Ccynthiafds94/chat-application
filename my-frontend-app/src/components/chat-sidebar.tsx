@@ -1,13 +1,13 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Button } from "./ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { cn } from "@/lib/utils";
+} from "./ui/dropdown-menu";
+import { ScrollArea } from "./ui/scroll-area";
+import { cn } from "./lib/utils";
 import {
   LogOut,
   MessageCircle,
@@ -19,7 +19,7 @@ import {
   X,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { Channel, ChannelFilters, ChannelSort } from "stream-chat";
+import type { Channel, ChannelFilters, ChannelSort } from "stream-chat";
 import { ChannelList, useChatContext } from "stream-chat-react";
 import { useTheme } from "../hooks/use-theme";
 
@@ -128,7 +128,7 @@ export const ChatSidebar = ({
                 >
                   <MessageSquare className="h-4 w-4 mr-2" />
                   <span className="flex-1 truncate text-sm font-medium">
-                    {previewProps.channel.data?.name || "New Writing Session"}
+                    {(previewProps.channel.data as any)?.name || "New Writing Session"}
                   </span>
                   <Button
                     variant="ghost"
